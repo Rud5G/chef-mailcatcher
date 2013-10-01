@@ -7,3 +7,8 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.4'
 recipe           'mailcatcher', 'Installs MailCatcher'
 recipe           'mailcatcher::php', 'Setup PHP to use MailCatcher using sendmail_path'
+
+%w{ centos debian fedora redhat suse ubuntu }.each do |os|
+  supports os
+end
+
